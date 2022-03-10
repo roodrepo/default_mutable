@@ -15,7 +15,9 @@ classifiers = [
 homepage = "https://github.com/roodrepo/default_mutable"
 repository = "https://github.com/roodrepo/default_mutable"
 readme = "README.md"
-
+include = [
+    "LICENSE",
+]
 [tool.poetry.dependencies]
 python = "^3"
 
