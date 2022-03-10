@@ -1,6 +1,7 @@
 from default_mutable.DefaultMutable import defaultMutable
 
 
+
 '''
     Python’s default arguments are evaluated once when the function is defined, not each time the function is called (like it is in say, Ruby).
     This means that if you use a mutable default argument and mutate it, you will and have mutated that object for all future calls to the function as well.
@@ -14,7 +15,6 @@ print('')
 print('function1:')
 function1(idx= 1)   # 1 {'a1': 'a1'} ['a']
 function1(idx= 2)   # 2 {'a1': 'a1', 'a2': 'a2'} ['a', 'a']
-
 
 
 
@@ -33,6 +33,7 @@ function2(1)    # 1 {'a1': 'a1'} ['a']
 function2(2)    # 2 {'a2': 'a2'} ['a']
 
 
+
 '''
     Setting all the arguments with mutable default arguments to an EMPTY dictionary or list
 '''
@@ -49,7 +50,6 @@ function2_2(2)    # 2 {'a2': 'a2'} ['a']
 
 
 
-
 '''
     When the decorator is executed with not arguments, we get the default behavior (same as "function1")
 '''
@@ -63,7 +63,6 @@ print('')
 print('function3:')
 function3(idx= 1)   # 1 {'a1': 'a1'} ['a']
 function3(idx= 2)   # 2 {'a1': 'a1', 'a2': 'a2'} ['a', 'a']
-
 
 
 
@@ -98,6 +97,7 @@ function4_2(idx= 1)   # 1 {'a1': 'a1'} ['a']
 function4_2(idx= 2)   # 2 {'a2': 'a2'} ['a']
 
 
+
 '''
     As no value is passed, the decorator set the default value for "list1" an empty list. "dict1" has the default behavior
 '''
@@ -114,9 +114,6 @@ function4_3(idx= 2) # 2 {'a1': 'a1', 'a2': 'a2'} ['a']
 
 
 
-
-
-
 '''
     The default values are mutable and "list1" get incremented from one function to the other
 '''
@@ -129,8 +126,6 @@ print('')
 print('function5:')
 function5(idx= 1)   # 1 {'a1': 'a1'} ['init', 'a']
 function5(idx= 2)   # 2 {'a1': 'a1', 'a2': 'a2'} ['init', 'a', 'a']
-
-
 
 
 
@@ -150,7 +145,6 @@ function6(idx= 2)   # 2 {'a2': 'a2'} ['init', 'a']
 
 
 
-
 '''
     Default value for "list1" is not an empty list
 '''
@@ -164,6 +158,7 @@ print('')
 print('function7:')
 function7(idx= 1)   # 1 {'a1': 'a1'} ['init', 'a']
 function7(idx= 2)   # 2 {'a2': 'a2'} ['init', 'a']
+
 
 
 '''
@@ -197,6 +192,7 @@ function7_3(idx= 1) # 1 {'a1': 'a1'} ['a']
 function7_3(idx= 2) # 2 {'a2': 'a2'} ['a']
 
 
+
 '''
     Default value for "dict1" and "list1" are preset
 '''
@@ -212,6 +208,7 @@ function8(idx= 1)   # 1 {'dict_init': 'dict_init', 'a1': 'a1'} ['init', 'a']
 function8(idx= 2)   # 2 {'dict_init': 'dict_init', 'a2': 'a2'} ['init', 'a']
 
 
+
 '''
     Passed values are not overridden
 '''
@@ -225,6 +222,8 @@ print('')
 print('function9:')
 function9(idx= 1, dict1= {'dict_value': 'dict_value'}, list1= ['list_value'])   # 1 {'dict_value': 'dict_value', 'a1': 'a1'} ['list_value', 'a']
 function9(idx= 2, dict1= {'dict_value': 'dict_value'}, list1= ['list_value'])   # 2 {'dict_value': 'dict_value', 'a2': 'a2'} ['list_value', 'a']
+
+
 
 '''
     Passed values are not overridden
