@@ -18,6 +18,10 @@ Default Mutable is a Python decorator that overrides default mutable values and 
 - Real use cases
 - Support & documentation
 
+## Authors
+
+- Rudy Fernandez
+
 ## Install
 The easiest way to install default_mutable using pip:
 `pip install default_mutable`
@@ -278,6 +282,3 @@ function10(1, {'dict_value': 'dict_value'}, ['list_value']) # 1 {'dict_value': '
 function10(2, {'dict_value': 'dict_value'}, ['list_value']) # 2 {'dict_value': 'dict_value', 'a2': 'a2'} ['list_value', 'a']
 ```
 
-## Authors
-
-- Rudy Fernandez
