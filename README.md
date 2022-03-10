@@ -26,7 +26,7 @@ Default Mutable is a Python decorator that overrides default mutable values and 
 The easiest way to install default_mutable using pip:
 `pip install default_mutable`
 
-## [Examples](https://github.com/roodrepo/default_mutable/tree/v0-dev/examples)
+## [Examples](https://github.com/roodrepo/default_mutable/blob/v0-dev/examples/example1.py)
 
 
 Python’s default arguments are evaluated once when the function is defined, not each time the function is called (like it is in say, Ruby). This means that if you use a mutable default argument and mutate it, you will and have mutated that object for all future calls to the function as well.
