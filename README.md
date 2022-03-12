@@ -24,7 +24,7 @@ Default Mutable is a Python decorator that overrides default mutable values and 
 
 ## Install
 The easiest way to install default_mutable using pip:
-`pip install default_mutable`
+`pip install default-mutable`
 
 ## [Examples](https://github.com/roodrepo/default_mutable/blob/v0-dev/examples/example1.py)
 
